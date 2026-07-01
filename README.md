@@ -3,6 +3,8 @@
 個人知識庫，採用 **LYT（Linking Your Thinking）** 框架的 **ACE** 結構整理。
 總入口見 [Home](./Home.md)。
 
+> 🤖 **AI agent 維護指南見 [AGENTS.md](./AGENTS.md)** — 定期把自動寫入的新筆記歸檔進 ACE 結構的完整流程。
+
 ## 結構（ACE）
 
 ```
