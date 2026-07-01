@@ -12,22 +12,25 @@ BrainThinking 採用 **LYT（Linking Your Thinking）** 的 **ACE** 結構整理
 
 ## 🗺️ 主題地圖（Maps of Content）
 
-- [[AI MOC]] — Agent、工具鏈、記憶卡、知識庫工具
+- [[AI MOC]] — Agent、工具鏈、記憶卡、知識庫工具、AI 洞察
 - [[自我成長 MOC]] — 自省、能動性、習慣
 
 ## 📚 Atlas（知識層）
 
-- **Things** — 概念、工具、框架、模板
+- **Things** — 概念 / 工具 / 框架 / 模板
 - **Statements** — 我自己的觀點與洞察
 - **Sources** — 書 / 文章 / skill / 貼文的摘要
+- 未歸入 MOC 的卡片：[[助理身分-傑瑞]]
 
 ## 🗓️ Calendar（時間層）
 
 - **Journal** — 自省、日記、回顧
+  - [[2026-06-19-事情慢慢來才是最快]]
 
 ## 🚀 Efforts（執行層）
 
-- **Projects** — 有明確終點的專案
+- **Projects**
+  - [[lucifer-claw]] — 專案整理紀錄與連結
 
 ---
 
