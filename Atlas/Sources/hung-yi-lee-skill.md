@@ -1,3 +1,12 @@
+---
+up: ["[[AI MOC]]"]
+collection: ["[[Sources]]"]
+related: ["[[知識庫搭建工具比較]]"]
+created: 2026-06-11
+source: telegram
+says: "把李宏毅課程整理成可查詢知識庫與 916 節點知識圖譜的 skill 專案"
+---
+
 # voidful/hung-yi-lee-skill 整理摘要
 
 ## 內容整理

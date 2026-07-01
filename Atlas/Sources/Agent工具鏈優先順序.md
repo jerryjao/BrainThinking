@@ -1,3 +1,12 @@
+---
+up: ["[[AI MOC]]"]
+collection: ["[[Sources]]"]
+related: []
+created: 2026-06-06
+source: telegram
+says: "Agent 取得工具的優先順序：LLM 生成 > CLI > Skill > Plugins > MCP > 寫程式"
+---
+
 # Facebook 貼文整理
 
 - 主題：Agent 需要工具時，LLM 生成 > CLI > Skill > Plugins > MCP > 寫程式。

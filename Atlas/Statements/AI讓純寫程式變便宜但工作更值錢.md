@@ -1,3 +1,12 @@
+---
+up: ["[[AI MOC]]"]
+collection: ["[[Statements]]"]
+related: []
+created: 2026-06-16
+source: telegram
+says: "AI 把純 coding 商品化，但判斷、溝通與結果負責這些『工作』反而更值錢"
+---
+
 # AI 讓純寫程式變便宜了，但工作更值錢
 
 ## 核心觀點
