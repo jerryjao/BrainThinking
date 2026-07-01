@@ -1,3 +1,12 @@
+---
+up: ["[[AI MOC]]"]
+collection: ["[[Things]]"]
+related: ["[[lucifer-claw]]"]
+created: 2026-06-07
+source: telegram
+says: "ecsctl：把 ECS Fargate 常見操作收進更順手 CLI 的工具筆記"
+---
+
 # ECSctl / Cloud tool 整理筆記
 
 ## 主題
