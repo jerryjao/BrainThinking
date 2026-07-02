@@ -3,6 +3,9 @@
 給在此 repo 工作的 AI agent（Claude Code / Codex / 其他）。
 本知識庫採用 **LYT（Linking Your Thinking）** 的 **ACE** 結構。人類讀者請先看 [README](./README.md)、入口見 [Home](./Home.md)。
 
+> 📥 自動寫入端（Telegram Agent 等）記錄時應遵循的資料架構見 [docs/INBOX_SCHEMA.md](./docs/INBOX_SCHEMA.md)。
+> 依該規格擷取的筆記會帶 `status: inbox` 與 `type` 等欄位，整理時可直接照欄位搬檔。
+
 ---
 
 ## 一、這個 repo 是什麼
@@ -32,7 +35,9 @@ BrainThinking/
     └── Projects/           # 有明確終點的專案
 ```
 
-**「未歸檔區」**：任何**不在** `Atlas/`、`Calendar/`、`Efforts/` 底下，且**不是** `Home.md`／`README.md`／`TEMPLATE.md`／`AGENTS.md` 的 `.md` 檔，都視為**待整理的新筆記**。
+**「未歸檔區」**：兩種待整理的新筆記——
+1. **`_inbox/` 底下**：依 [docs/INBOX_SCHEMA.md](./docs/INBOX_SCHEMA.md) 擷取、帶 `status: inbox` 的筆記（**新格式，優先處理**，已附 `type`/`says` 等欄位）。
+2. **舊格式散檔**：任何**不在** `Atlas/`、`Calendar/`、`Efforts/`、`docs/` 底下，且**不是** `Home.md`／`README.md`／`TEMPLATE.md`／`AGENTS.md` 的 `.md` 檔（無 frontmatter，需讀內文判斷）。
 
 ---
 
@@ -69,10 +74,12 @@ says: "一句話核心觀點"
 > 每次整理**開一個新分支、走 PR**（main 有分支保護，見〈六、環境注意事項〉）。
 
 ### 步驟 1：找出待整理的新筆記
-列出「未歸檔區」的所有 `.md`（定義見第二節）。若沒有，回報「無待整理項目」即可結束。
+列出「未歸檔區」的所有 `.md`（定義見第二節）：先掃 `_inbox/`（`status: inbox`），再掃舊格式散檔。若沒有，回報「無待整理項目」即可結束。
 
 ### 步驟 2：逐檔分類與處置
-對每個新檔，判斷屬於下列哪一種：
+**若檔案已有 `type` 欄位（來自 INBOX_SCHEMA）**：直接照 `type` 對應落點（`transient` → 刪除；其餘見 [docs/INBOX_SCHEMA.md](./docs/INBOX_SCHEMA.md) 的落點表），並沿用其 `created`／`says`／`url`／`project` 欄位，省去重新判斷。
+
+**若無 `type`（舊格式）**：讀內文判斷屬於下列哪一種：
 
 | 判斷 | 處置 |
 |------|------|
@@ -85,7 +92,9 @@ says: "一句話核心觀點"
 
 處置細節：
 1. `git mv` 舊檔到新路徑與語意化檔名（保留歷史）。
-2. 在檔案開頭補上 frontmatter：`created` 取自原檔時間戳、`source` 依來源、`says` 濃縮一句、`collection`/`up` 依分類。
+2. 整理 frontmatter 成標準卡片格式（範本見 [TEMPLATE.md](./TEMPLATE.md)）：
+   - **舊格式**：新增 `created`（取自原檔時間戳）、`source`、`says`、`collection`/`up`。
+   - **INBOX_SCHEMA 格式**：把 `type` 換成對應的 `collection`（如 `sources` → `[[Sources]]`）、填 `up`；移除 inbox 專用欄位 `status`／`capture_id`／`type`（`created`／`says`／`url`／`tags` 可保留）。
 3. 內容若無 H1 標題可補一個；不要竄改原意。
 
 ### 步驟 3：更新 MOC 與 Home
